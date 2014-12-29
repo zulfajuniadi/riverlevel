@@ -91,6 +91,6 @@ Route::filter('csrf', function()
 
 Route::filter('cors', function($route, $request, $response)
 {
-    $response->headers->set('Access-Control-Allow-Origin', 'http://domain.dev');
+    $response->headers->set('Access-Control-Allow-Origin', '*');
     return $response;
 });
