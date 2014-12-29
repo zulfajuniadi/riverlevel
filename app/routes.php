@@ -18,7 +18,7 @@ App::after(function($request, $response)
 
 Route::get('/', function()
 {
-	return 'Malaysian River Levels API';
+    return 'Malaysian River Levels API';
 });
 
 Route::group(['prefix' => 'rivers', 'after' => 'cors'], function()
