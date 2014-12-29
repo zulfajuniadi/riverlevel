@@ -21,13 +21,13 @@ Route::get('/', function()
 	return 'Malaysian River Levels API';
 });
 
-Route::group(['prefix' => 'rivers'], function()
+Route::group(['prefix' => 'rivers', 'after' => 'cors'], function()
 {
     Route::get('state/{state_name}', 'RiverController@states');
     Route::get('alerts', 'RiverController@alerts');
 });
 
-Route::group(['prefix' => 'cron'], function()
+Route::group(['prefix' => 'cron', 'after' => 'cors'], function()
 {
     Route::get('rivers', 'CronController@rivers');
 });
